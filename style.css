@@ -16,6 +16,33 @@
     margin: 0 30vw;
 }
 
+button{
+    color: #28282b;
+    background-color: #dedede;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #28282b;
+    font-size: 1rem;
+    font-family: Pangolin, Arial, Helvetica, sans-serif;
+    padding: 0.5vh 0;
+}
+
+button:active{
+    background-color: #a1a1a1;
+}
+
+input{
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #28282b;
+    font-size: 1rem;
+    font-family: Pangolin, Arial, Helvetica, sans-serif;
+}
+
+#generate-bento-link{
+    margin-top: 4vh;
+}
+
 @media only screen and (max-width: 800px){
     .column{
         margin: 0 10vw;
