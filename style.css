@@ -43,6 +43,23 @@ input{
     margin-top: 4vh;
 }
 
+.link{
+    display: flex;
+    flex-direction: column;
+}
+
+#links{
+    margin: 3vh 0;
+}
+
+#links > * {
+    margin-top: 1vh;
+}
+
+#links > * > * {
+    margin-top: 1vh;
+}
+
 @media only screen and (max-width: 800px){
     .column{
         margin: 0 10vw;
