@@ -32,11 +32,56 @@ function main(){
     const links = document.getElementById('links')
     links.appendChild(createLinkForm())
 
-    const addButton = documnet.getElementById('add-button')
+    const addButton = document.getElementById('add-button')
     addButton.addEventListener('click', (event) => {
         event.preventDefault()
         links.appendChild(createLinkForm())
     })
+
+    const generateBentoLink = document.getElementById('generate-bento-link')
+    const generatedLink = document.getElementById('generated-link')
+
+    generateBentoLink.addEventListener('click', (event) => {
+        event.preventDefault()
+        const links = document.getElementById('links').children
+        const bentoData = [{
+            bentoTitle : document.getElementById('bento-title').value,
+            bentoAuthor : document.getElementById('bento-author').value,
+            bentoDescription : document.getElementById('bento-description').value
+        }]
+
+        for (const link of links){
+            const linkData = {}
+            for (const element of link.children){
+                if (element.name === 'url-field'){
+                    linkData.urlField = element.value
+                    continue
+                }
+
+                if (element.name === 'title-field'){
+                    linkData.titleField === element.value
+                    continue
+                }
+
+                if (element.name === 'description-field'){
+                    linkData.descriptionField === element.value
+                    continue
+                }
+            }
+            bentoData.push(linkData)
+        }
+
+        generatedLink.innerText = `${location.protocol}${location.host}/link.html?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
+    })
+
+    const copyButton = document.getElementById('copy-button')
+    copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(generatedLink.innerText)
+        const message = document.getElementById('message')
+        message.innerText = 'Link copied to clipboard!'
+        setTimeout(() => message.innerText = '', 2000)
+    })
+
 }
 
 main()

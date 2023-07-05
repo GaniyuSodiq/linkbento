@@ -60,6 +60,19 @@ input{
     margin-top: 1vh;
 }
 
+#generated-link{
+    overflow-wrap: break-word;
+}
+
+#copy-button{
+    margin-bottom: 8vh;
+}
+
+#message{
+    margin: 2vh 0;
+}
+
+
 @media only screen and (max-width: 800px){
     .column{
         margin: 0 10vw;
