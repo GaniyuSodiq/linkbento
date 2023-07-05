@@ -31,6 +31,12 @@ function createLinkForm(){
 function main(){
     const links = document.getElementById('links')
     links.appendChild(createLinkForm())
+
+    const addButton = documnet.getElementById('add-button')
+    addButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        links.appendChild(createLinkForm())
+    })
 }
 
 main()
