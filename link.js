@@ -5,7 +5,7 @@ function main(){
     let bentoData
     try {
         bentoData = JSON.parse(decodeURIComponent(window.atob(data)))
-    } catch (error) {
+    } catch {
         bentoContainer.innerText = 'You entered an invalid URL.'
         return
     }
