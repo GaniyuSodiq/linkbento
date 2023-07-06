@@ -10,6 +10,7 @@ function main(){
         return
     }
 
+    console.log(bentoData)
     const bentoMetaData = bentoData.shift()
     const bento = {
         title: document.createElement('h1'),

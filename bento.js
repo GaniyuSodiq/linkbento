@@ -59,12 +59,12 @@ function main(){
                 }
 
                 if (element.name === 'title-field'){
-                    linkData.titleField === element.value
+                    linkData.titleField = element.value
                     continue
                 }
 
                 if (element.name === 'description-field'){
-                    linkData.descriptionField === element.value
+                    linkData.descriptionField = element.value
                     continue
                 }
             }
